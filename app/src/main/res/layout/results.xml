@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Results">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/smile_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    tools:src="@drawable/smile" />
+
+                <TextView
+                    android:id="@+id/invisible_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintRight_toLeftOf="@+id/date_full"
+                    app:layout_constraintLeft_toRightOf="@+id/smile_image"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp"
+                    tools:text="дата"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/date_full"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_medium"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/smile_image"
+                    app:layout_constraintBottom_toTopOf="@id/edit_button"
+                    tools:text="29 июня 2021 г."
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/date_short"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/smile_image"
+                    tools:text="ПН"
+                    android:textSize="38sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/edit_button"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="2dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Edit"
+                    android:textSize="20sp"
+                    app:icon="@drawable/ic_edit" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginBottom="8dp"
+                android:isIndicator="true"
+                android:progressTint="#FFC107"
+                android:rating="3.5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/date_short" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Моя оценка"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/roboto"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toRightOf="@id/date_short"
+                app:layout_constraintBottom_toTopOf="@id/ratingBar"/>
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="3.5"
+                android:textSize="30sp"
+                android:fontFamily="@font/roboto"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintLeft_toRightOf="@id/ratingBar"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

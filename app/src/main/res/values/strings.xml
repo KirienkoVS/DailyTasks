@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Daily Tasks</string>
+
+    <!--TextViews-->
+    <string name="date">Дата:</string>
+    <string name="choose_date_text">выберите дату</string>
+    <string name="hygiene">Гигиена</string>
+    <string name="order">Порядок</string>
+    <string name="classes">Кружки и секции</string>
+    <string name="behavior">Поведение</string>
+    <string name="study">Обучение и развитие</string>
+    <string name="physical_training">Физкультура</string>
+
+    <!--Checkboxes-->
+    <string name="teeth_morning">- почистил зубы утром</string>
+    <string name="teeth_evening">- почистил зубы вечером</string>
+    <string name="hand_washing">- помыл руки после улицы</string>
+
+    <string name="clothes">- убрал свои вещи</string>
+    <string name="toys">- убрал игрушки</string>
+    <string name="toilet">- убрал за собой в туалете</string>
+    <string name="kitchen">- убрал за собой на кухне</string>
+
+    <string name="taekwondo">- тхэквондо</string>
+    <string name="english">- английский</string>
+
+    <string name="behavior_morning">- поведение утром</string>
+    <string name="behavior_day">- поведение днём</string>
+    <string name="behavior_evening">- поведение вечером</string>
+
+    <string name="reading">- внеклассное чтение</string>
+    <string name="logicLike">- занятия на LogicLike</string>
+    <string name="uchiRu">- занятия на UCHI.RU</string>
+
+    <string name="pushUps">- отжимания (5 раз)</string>
+    <string name="squats">- приседания (30 раз)</string>
+    <string name="monkey_bar">- вис на турнике (20 сек.)</string>
+
+    <!--Buttons-->
+    <string name="save_button">Save</string>
+    <string name="delete_button">Delete</string>
+    <string name="load_button">Load</string>
+    <string name="history_button">History</string>
+    <string name="update_button">Update</string>
+    <string name="room_button">ROOM</string>
+
+
+</resources>

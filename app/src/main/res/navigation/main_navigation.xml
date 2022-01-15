@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/dailyTasksFragment">
+    <fragment
+        android:id="@+id/dailyTasksFragment"
+        android:name="com.example.dailytasks.DailyTasksFragment"
+        android:label="fragment_daily_tasks"
+        tools:layout="@layout/fragment_daily_tasks" >
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_boyFragmentGeneral"
+            app:destination="@id/boyFragmentGeneral" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_tasksFragment"
+            app:destination="@id/boyTasksFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_girlTasksFragment"
+            app:destination="@id/girlTasksFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_girlFragmentGeneral"
+            app:destination="@id/girlFragmentGeneral" />
+    </fragment>
+    <fragment
+        android:id="@+id/boyFragment"
+        android:name="com.example.dailytasks.boy.BoyFragment"
+        android:label="fragment_boy"
+        tools:layout="@layout/fragment_boy" >
+        <action
+            android:id="@+id/action_boyFragment_to_boyFragmentGeneral"
+            app:destination="@id/boyFragmentGeneral"
+            app:popUpTo="@id/boyFragmentGeneral"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/boyFragmentHistory"
+        android:name="com.example.dailytasks.boy.BoyFragmentHistory"
+        android:label="fragment_boy_history"
+        tools:layout="@layout/fragment_boy_history">
+        <argument
+            android:name="bundleDate"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_boyFragmentHistory_to_boyFragmentGeneral"
+            app:destination="@id/boyFragmentGeneral"
+            app:popUpTo="@id/boyFragmentGeneral"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/boyFragmentGeneral"
+        android:name="com.example.dailytasks.boy.BoyFragmentGeneral"
+        android:label="fragment_boy_general"
+        tools:layout="@layout/fragment_boy_general" >
+        <action
+            android:id="@+id/action_boyFragmentGeneral_to_boyFragment"
+            app:destination="@id/boyFragment" />
+        <action
+            android:id="@+id/action_boyFragmentGeneral_to_boyFragmentHistory"
+            app:destination="@id/boyFragmentHistory" />
+    </fragment>
+    <fragment
+        android:id="@+id/boyTasksFragment"
+        android:name="com.example.dailytasks.boy.BoyTasksFragment"
+        android:label="fragment_tasks"
+        tools:layout="@layout/fragment_tasks" >
+        <action
+            android:id="@+id/action_tasksFragment_to_dailyTasksFragment"
+            app:destination="@id/dailyTasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/girlTasksFragment"
+        android:name="com.example.dailytasks.girl.GirlTasksFragment"
+        android:label="GirlTasksFragment" >
+        <action
+            android:id="@+id/action_girlTasksFragment_to_dailyTasksFragment"
+            app:destination="@id/dailyTasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/girlFragmentGeneral"
+        android:name="com.example.dailytasks.girl.GirlFragmentGeneral"
+        android:label="GirlFragmentGeneral" >
+        <action
+            android:id="@+id/action_girlFragmentGeneral_to_girlFragment"
+            app:destination="@id/girlFragment" />
+        <action
+            android:id="@+id/action_girlFragmentGeneral_to_girlFragmentHistory"
+            app:destination="@id/girlFragmentHistory" />
+    </fragment>
+    <fragment
+        android:id="@+id/girlFragment"
+        android:name="com.example.dailytasks.girl.GirlFragment"
+        android:label="GirlFragment" >
+        <action
+            android:id="@+id/action_girlFragment_to_girlFragmentGeneral"
+            app:destination="@id/girlFragmentGeneral"
+            app:popUpTo="@id/girlFragmentGeneral"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/girlFragmentHistory"
+        android:name="com.example.dailytasks.girl.GirlFragmentHistory"
+        android:label="GirlFragmentHistory" >
+        <action
+            android:id="@+id/action_girlFragmentHistory_to_girlFragmentGeneral"
+            app:destination="@id/girlFragmentGeneral"
+            app:popUpTo="@id/girlFragmentGeneral"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="bundleDate"
+            app:argType="string" />
+    </fragment>
+</navigation>
